@@ -1,6 +1,8 @@
 #
 
-** Teletale ** A website where you will find all kind of custom Iphones and regular Iphones with Extended warrenty.
+# Teletale
+
+## A website where you will find all kind of custom Iphones and regular Iphones with Extended warrenty.
 
 #
 
