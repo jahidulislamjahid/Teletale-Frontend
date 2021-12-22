@@ -7,7 +7,7 @@ const Error = () => {
     <div>
       <Navbar bg="bg-gray-800" textColor="text-white"></Navbar>
       <img
-        src="https://i.ibb.co/GtnHvtn/error-bg.png"
+        src="https://png.pngtree.com/png-vector/20191031/ourlarge/pngtree-socket-404-error-page-for-desktop-and-mobile-png-image_1928856.jpg"
         className="mt-8 w-2/4 mx-auto"
         alt=""
         srcset=""
