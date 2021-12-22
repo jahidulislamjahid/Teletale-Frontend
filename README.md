@@ -6,7 +6,7 @@
 
 #
 
-## Live Site
+## Live Site (https://teletale-7c144.web.app/explore)
 
 ### Technologies Used
 
