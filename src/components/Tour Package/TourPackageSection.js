@@ -6,7 +6,7 @@ const TourPackageSection = () => {
   const [toursPack, setToursPack] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/Devices")
+    fetch("https://obscure-chamber-14380.herokuapp.com/Devices")
       .then((res) => res.json())
       .then((data) => setToursPack(data));
   }, []);

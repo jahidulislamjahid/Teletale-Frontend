@@ -23,7 +23,7 @@ const TourPackCard = (props) => {
 
   const [booking, setUser] = useState();
   useEffect(() => {
-    fetch("http://localhost:5000/Devices")
+    fetch("https://obscure-chamber-14380.herokuapp.com/Devices")
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);
@@ -37,7 +37,7 @@ const TourPackCard = (props) => {
   // ------------------handleDelete
   const handleDelete = (id) => {
     console.log(id);
-    const url = `http://localhost:5000/Devices${id}`;
+    const url = `https://obscure-chamber-14380.herokuapp.com/Devices${id}`;
     fetch(url, {
       method: "DELETE",
     })
@@ -53,7 +53,7 @@ const TourPackCard = (props) => {
   return (
     <div className="bg-white rounded-xl p-4 box-border overflow-hidden relative flex flex-col justify-between">
       {/* country badge  */}
-      <div className="absolute top-10 text-sm left-0 z-50 bg-yellow-400 font-primary px-4 py-1 rounded-lg">
+      <div className="absolute top-10 text-sm left-0 z-50 bg-gray-200 font-primary px-4 py-1 rounded-lg">
         {country}
       </div>
       {/* image  */}

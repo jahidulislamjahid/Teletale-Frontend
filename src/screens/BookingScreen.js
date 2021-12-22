@@ -10,7 +10,7 @@ const BookingScreen = () => {
 
   //bookings details
   useEffect(() => {
-    fetch(`http://localhost:5000/Devices/${id}`)
+    fetch(`https://obscure-chamber-14380.herokuapp.com/Devices/${id}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, [id]);

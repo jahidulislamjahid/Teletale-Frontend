@@ -12,8 +12,8 @@ const Navbar = ({ bg, textColor, width }) => {
   // console.log(user);
 
   const menu = [
-    { id: 1, text: "dashboard", to: "/dashboard" },
-    { id: 2, text: "my bookings", to: "/my-bookings" },
+    { id: 1, text: "Dashboard", to: "/dashboard" },
+    { id: 2, text: "My bookings", to: "/my-bookings" },
   ];
 
   //handle click

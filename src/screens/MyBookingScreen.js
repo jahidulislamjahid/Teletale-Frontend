@@ -16,7 +16,7 @@ const MyBookingScreen = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch("http://localhost:5000/bookings")
+    fetch("https://obscure-chamber-14380.herokuapp.com/bookings")
       .then((res) => res.json())
       .then((data) =>
         setMyBookings(data.filter((item) => item.data.email === user.email))
@@ -42,7 +42,7 @@ const MyBookingScreen = () => {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`http://localhost:5000/bookings/${id}`)
+          .delete(`https://obscure-chamber-14380.herokuapp.com/bookings/${id}`)
           .then((res) => {
             if (res.data.deletedCount > 0) {
               swal("Poof! Booking has been deleted", {

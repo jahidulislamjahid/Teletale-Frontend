@@ -7,7 +7,7 @@ const Review = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:5000/testimonials", data)
+      .post("https://obscure-chamber-14380.herokuapp.com/testimonials", data)
       .then((response) => {
         // console.log(response);
         if (response.statusText === "OK") {

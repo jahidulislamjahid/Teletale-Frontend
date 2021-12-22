@@ -7,7 +7,7 @@ const AddNewForm = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("https://ancient-castle-52925.herokuapp.com/tours", data)
+      .post("https://obscure-chamber-14380.herokuapp.com/Devices", data)
       .then((response) => {
         if (response.statusText === "OK") {
           swal("Success!", "New Drone Added successfully", "success").then(() =>

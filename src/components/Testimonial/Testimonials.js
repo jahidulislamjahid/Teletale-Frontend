@@ -15,7 +15,7 @@ const Testimonials = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/testimonials")
+      .get("https://obscure-chamber-14380.herokuapp.com/testimonials")
       .then((res) => setTestimonialData(res.data));
   }, []);
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
+import { BsFacebook,  BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 const Footer = () => {
   const footerLink = [
@@ -34,6 +35,22 @@ const Footer = () => {
              Teletale
           </span>
               </Link>
+            </div>
+            <div className="flex">
+              
+              <a href="https://www.facebook.com/zahidul.islam.10420" target="_blank">
+              <BsFacebook className="ml-2 mr-2 mt-5 text-2xl text-blue-600">
+              </BsFacebook>
+              </a>
+              <a href="https://www.instagram.com/zahidul_islam/" target="_blank">
+              <BsInstagram className="mt-5 mr-2 text-2xl text-pink-500"></BsInstagram>
+              </a>
+              <a href="https://www.linkedin.com/in/jahidul-islam-076a8b216/" target="_blank">
+                <BsLinkedin className="mt-5 mr-2 text-2xl text-blue-700"></BsLinkedin>
+                </a>
+                <a href="https://twitter.com/Zahidul15053004" target="_blank">
+                <BsTwitter className="mt-5 mr-2 text-2xl text-blue-700"></BsTwitter>
+                </a>
             </div>
           </div>
           <div className="flex-grow flex justify-end flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
