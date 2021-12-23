@@ -49,7 +49,7 @@ const useFirebase = () => {
         }).then(() => {
           swal(
             "Welcome!",
-            `let's explore your favorite drone ${res.user.displayName}`,
+            `let's explore your favorite products ${res.user.displayName}`,
             "success"
           );
           history.push("/");

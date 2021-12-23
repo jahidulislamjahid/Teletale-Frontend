@@ -12,7 +12,7 @@ const override = css`
 `;
 
 const useLoading = () => {
-  return <ClimbingBoxLoader color="#20312d" css={override} size={15} />;
+  return <ClimbingBoxLoader color="#20312d" css={override} size={30} />;
 };
 
 export default useLoading;
