@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { MdPhoneIphone } from "react-icons/md";
-import { MdProductionQuantityLimits } from "react-icons/md";
-import { useHistory } from "react-router-dom";
-import useBooking from "../../hooks/useBooking";
 import { AiOutlineDelete } from "react-icons/ai";
+import { MdPhoneIphone, MdProductionQuantityLimits } from "react-icons/md";
+import { useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import useBooking from "../../hooks/useBooking";
 
 const TourPackCard = (props) => {
   const {
@@ -23,7 +22,7 @@ const TourPackCard = (props) => {
 
   const [booking, setUser] = useState();
   useEffect(() => {
-    fetch("https://obscure-chamber-14380.herokuapp.com/Devices")
+    fetch("https://teletale.vercel.app/Devices")
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);
@@ -37,7 +36,7 @@ const TourPackCard = (props) => {
   // ------------------handleDelete
   const handleDelete = (id) => {
     console.log(id);
-    const url = `https://obscure-chamber-14380.herokuapp.com/Devices${id}`;
+    const url = `https://teletale.vercel.app/Devices${id}`;
     fetch(url, {
       method: "DELETE",
     })

@@ -10,7 +10,7 @@ const BookingScreen = () => {
 
   //bookings details
   useEffect(() => {
-    fetch(`https://obscure-chamber-14380.herokuapp.com/Devices/${id}`)
+    fetch(`https://teletale.vercel.app/Devices/${id}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, [id]);

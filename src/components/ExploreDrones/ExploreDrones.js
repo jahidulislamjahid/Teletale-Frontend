@@ -9,7 +9,7 @@ const ExploreDrones = () => {
   const [dronePack, setDronePack] = useState([]);
 
   useEffect(() => {
-    fetch("https://obscure-chamber-14380.herokuapp.com/Devices")
+    fetch("https://teletale.vercel.app/Devices")
       .then((res) => res.json())
       .then((data) => setDronePack(data));
   }, []);

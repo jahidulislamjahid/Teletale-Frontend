@@ -15,7 +15,7 @@ const ManageBookingsScreen = () => {
   const history = useHistory();
   const { admin } = useAuth();
   useEffect(() => {
-    fetch("https://obscure-chamber-14380.herokuapp.com/bookings")
+    fetch("https://teletale.vercel.app/bookings")
       .then((res) => res.json())
       .then((data) => setAllBookings(data));
   }, []);
@@ -44,7 +44,8 @@ const ManageBookingsScreen = () => {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`https://obscure-chamber-14380.herokuapp.com/bookings/${id}`)
+          // .delete(`https://obscure-chamber-14380.herokuapp.com/bookings/${id}`)
+          .delete(`https://teletale.vercel.app/bookings/${id}`)
           .then((res) => {
             if (res.data.deletedCount > 0) {
               swal("Poof! Booking has deleted", {
@@ -67,7 +68,7 @@ const ManageBookingsScreen = () => {
     const prevData = prevBooking.data;
     prevData.status = "Approved";
     axios
-      .put(`https://obscure-chamber-14380.herokuapp.com/bookings/${id}`, {
+      .put(`https://teletale.vercel.app/bookings/${id}`, {
         newData: prevData,
       })
       .then((res) => {

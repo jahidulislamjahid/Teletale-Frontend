@@ -15,7 +15,7 @@ const Testimonials = () => {
 
   useEffect(() => {
     axios
-      .get("https://obscure-chamber-14380.herokuapp.com/testimonials")
+      .get("https://teletale.vercel.app/testimonials")
       .then((res) => setTestimonialData(res.data));
   }, []);
 

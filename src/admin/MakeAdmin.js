@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     setEmail(data.email);
     const email = data.email;
     const user = { email };
-    fetch("https://obscure-chamber-14380.herokuapp.com/admin", {
+    fetch("https://teletale.vercel.app/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

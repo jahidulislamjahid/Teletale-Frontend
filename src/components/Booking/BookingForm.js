@@ -16,7 +16,7 @@ const BookingForm = ({ bookings, totalBookingCost }) => {
     const newData = { bookings, data };
     console.log(newData);
     axios
-      .post("https://obscure-chamber-14380.herokuapp.com/bookings", newData)
+      .post("https://teletale.vercel.app/bookings", newData)
       .then((response) => {
         if (response.statusText === "OK") {
           swal("Good job!", "Order has been placed", "success").then(() => {

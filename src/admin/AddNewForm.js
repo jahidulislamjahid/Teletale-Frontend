@@ -7,7 +7,7 @@ const AddNewForm = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("https://obscure-chamber-14380.herokuapp.com/Devices", data)
+      .post("https://teletale.vercel.app/Devices", data)
       .then((response) => {
         if (response.statusText === "OK") {
           swal("Success!", "New Drone Added successfully", "success").then(() =>

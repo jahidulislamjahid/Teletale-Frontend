@@ -7,7 +7,7 @@ const Review = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("https://obscure-chamber-14380.herokuapp.com/testimonials", data)
+      .post("https://teletale.vercel.app/testimonials", data)
       .then((response) => {
         // console.log(response);
         if (response.statusText === "OK") {
