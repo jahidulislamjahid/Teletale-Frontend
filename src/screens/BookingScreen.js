@@ -10,7 +10,7 @@ const BookingScreen = () => {
 
   //bookings details
   useEffect(() => {
-    fetch(`https://teletale.vercel.app/Devices/${id}`)
+    fetch(`https://teletale-server.vercel.app/Devices/${id}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, [id]);

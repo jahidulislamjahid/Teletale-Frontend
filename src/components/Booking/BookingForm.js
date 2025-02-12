@@ -16,7 +16,7 @@ const BookingForm = ({ bookings, totalBookingCost }) => {
     const newData = { bookings, data };
     console.log(newData);
     axios
-      .post("https://teletale.vercel.app/bookings", newData)
+      .post("https://teletale-server.vercel.app/bookings", newData)
       .then((response) => {
         if (response.statusText === "OK") {
           swal("Good job!", "Order has been placed", "success").then(() => {

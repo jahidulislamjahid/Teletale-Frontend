@@ -15,7 +15,7 @@ const ManageBookingsScreen = () => {
   const history = useHistory();
   const { admin } = useAuth();
   useEffect(() => {
-    fetch("https://teletale.vercel.app/bookings")
+    fetch("https://teletale-server.vercel.app/bookings")
       .then((res) => res.json())
       .then((data) => setAllBookings(data));
   }, []);
@@ -45,7 +45,7 @@ const ManageBookingsScreen = () => {
       if (willDelete) {
         axios
           // .delete(`https://obscure-chamber-14380.herokuapp.com/bookings/${id}`)
-          .delete(`https://teletale.vercel.app/bookings/${id}`)
+          .delete(`https://teletale-server.vercel.app/bookings/${id}`)
           .then((res) => {
             if (res.data.deletedCount > 0) {
               swal("Poof! Booking has deleted", {
@@ -68,7 +68,7 @@ const ManageBookingsScreen = () => {
     const prevData = prevBooking.data;
     prevData.status = "Approved";
     axios
-      .put(`https://teletale.vercel.app/bookings/${id}`, {
+      .put(`https://teletale-server.vercel.app/bookings/${id}`, {
         newData: prevData,
       })
       .then((res) => {
@@ -162,11 +162,10 @@ const ManageBookingsScreen = () => {
                           </td>
                           <td className="text-sm px-6 py-4 whitespace-nowrap">
                             <span
-                              className={`${
-                                data.status === "pending"
-                                  ? "bg-yellow-500"
-                                  : "bg-green-600"
-                              } text-white px-4 py-1 rounded-full font-primary`}
+                              className={`${data.status === "pending"
+                                ? "bg-yellow-500"
+                                : "bg-green-600"
+                                } text-white px-4 py-1 rounded-full font-primary`}
                             >
                               {data.status}
                             </span>

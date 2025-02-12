@@ -83,7 +83,7 @@ const useFirebase = () => {
         setUser(user);
         saveUser(user.email, user.displayName, user.photoURL, "PUT");
         // console.log(user);
-        swal("Welcome!", user.displayName , "success");
+        swal("Welcome!", user.displayName, "success");
         history.push("/");
       })
       .catch((error) => {
@@ -96,7 +96,7 @@ const useFirebase = () => {
 
   // admin data load
   useEffect(() => {
-    fetch(`https://teletale.vercel.app/users/${user.email}`)
+    fetch(`https://teletale-server.vercel.app/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -119,7 +119,7 @@ const useFirebase = () => {
   // save user
   const saveUser = (email, displayName, photoURL, method) => {
     const user = { email, displayName, photoURL };
-    fetch("https://teletale.vercel.app/users", {
+    fetch("https://teletale-server.vercel.app/users", {
       method: method,
       headers: {
         "content-type": "application/json",

@@ -6,7 +6,7 @@ const TourPackageSection = () => {
   const [toursPack, setToursPack] = useState([]);
 
   useEffect(() => {
-    fetch("https://teletale.vercel.app/Devices")
+    fetch("https://teletale-server.vercel.app/Devices")
       .then((res) => res.json())
       .then((data) => setToursPack(data));
   }, []);

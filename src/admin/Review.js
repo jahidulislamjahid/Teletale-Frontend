@@ -7,7 +7,7 @@ const Review = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("https://teletale.vercel.app/testimonials", data)
+      .post("https://teletale-server.vercel.app/testimonials", data)
       .then((response) => {
         // console.log(response);
         if (response.statusText === "OK") {

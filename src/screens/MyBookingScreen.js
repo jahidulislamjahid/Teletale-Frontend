@@ -16,7 +16,7 @@ const MyBookingScreen = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch("https://teletale.vercel.app/bookings")
+    fetch("https://teletale-server.vercel.app/bookings")
       .then((res) => res.json())
       .then((data) =>
         setMyBookings(data.filter((item) => item.data.email === user.email))
@@ -42,7 +42,7 @@ const MyBookingScreen = () => {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`https://teletale.vercel.app/bookings/${id}`)
+          .delete(`https://teletale-server.vercel.app/bookings/${id}`)
           .then((res) => {
             if (res.data.deletedCount > 0) {
               swal("Poof! Booking has been deleted", {
@@ -107,11 +107,10 @@ const MyBookingScreen = () => {
                                 <div className="flex items-center space-x-3">
                                   <div className="flex flex-col">
                                     <span
-                                      className={`${
-                                        data.status === "pending"
-                                          ? "bg-yellow-500"
-                                          : "bg-green-600"
-                                      } text-white px-4 py-1 rounded-full font-primary text-sm`}
+                                      className={`${data.status === "pending"
+                                        ? "bg-yellow-500"
+                                        : "bg-green-600"
+                                        } text-white px-4 py-1 rounded-full font-primary text-sm`}
                                     >
                                       {data.status}
                                     </span>

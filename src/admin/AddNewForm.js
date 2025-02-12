@@ -7,7 +7,7 @@ const AddNewForm = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("https://teletale.vercel.app/Devices", data)
+      .post("https://teletale-server.vercel.app/Devices", data)
       .then((response) => {
         if (response.statusText === "OK") {
           swal("Success!", "New Drone Added successfully", "success").then(() =>

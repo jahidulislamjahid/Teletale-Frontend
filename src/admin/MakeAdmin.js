@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     setEmail(data.email);
     const email = data.email;
     const user = { email };
-    fetch("https://teletale.vercel.app/admin", {
+    fetch("https://teletale-server.vercel.app/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

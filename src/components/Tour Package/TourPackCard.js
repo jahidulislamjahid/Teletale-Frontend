@@ -22,7 +22,7 @@ const TourPackCard = (props) => {
 
   const [booking, setUser] = useState();
   useEffect(() => {
-    fetch("https://teletale.vercel.app/Devices")
+    fetch("https://teletale-server.vercel.app/Devices")
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);
@@ -36,7 +36,7 @@ const TourPackCard = (props) => {
   // ------------------handleDelete
   const handleDelete = (id) => {
     console.log(id);
-    const url = `https://teletale.vercel.app/Devices${id}`;
+    const url = `https://teletale-server.vercel.app/Devices${id}`;
     fetch(url, {
       method: "DELETE",
     })

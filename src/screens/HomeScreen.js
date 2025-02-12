@@ -6,7 +6,8 @@ import Navbar from "../components/Navbar/Navbar";
 import Testimonials from "../components/Testimonial/Testimonials";
 import TourPackageSection from "../components/Tour Package/TourPackageSection";
 import Contact from "./Contact";
-
+import 'react-tabs/style/react-tabs.css';
+import '../styles/tabs.css';
 const HomeScreen = () => {
   return (
     <main className="bg-gray-200">

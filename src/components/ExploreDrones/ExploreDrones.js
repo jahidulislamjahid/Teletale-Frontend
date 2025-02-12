@@ -9,7 +9,7 @@ const ExploreDrones = () => {
   const [dronePack, setDronePack] = useState([]);
 
   useEffect(() => {
-    fetch("https://teletale.vercel.app/Devices")
+    fetch("https://teletale-server.vercel.app/Devices")
       .then((res) => res.json())
       .then((data) => setDronePack(data));
   }, []);
@@ -29,7 +29,7 @@ const ExploreDrones = () => {
               To Use The Latest Iphone.
             </h1>
             <p className="my-2 font-primary text-gray-400 text-center text-sm w-96 select-none">
-            Our Pro camera system gets its biggest upgrade ever. With next-level hardware that captures so much more detail. Superintelligent software for new photo and filmmaking techniques. And a mind-blowingly fast chip that makes it all possible. It’ll change the way you shoot.
+              Our Pro camera system gets its biggest upgrade ever. With next-level hardware that captures so much more detail. Superintelligent software for new photo and filmmaking techniques. And a mind-blowingly fast chip that makes it all possible. It’ll change the way you shoot.
             </p>
           </div>
         </Bounce>

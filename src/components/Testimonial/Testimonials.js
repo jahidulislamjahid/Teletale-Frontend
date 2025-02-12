@@ -15,7 +15,7 @@ const Testimonials = () => {
 
   useEffect(() => {
     axios
-      .get("https://teletale.vercel.app/testimonials")
+      .get("https://teletale-server.vercel.app/testimonials")
       .then((res) => setTestimonialData(res.data));
   }, []);
 
