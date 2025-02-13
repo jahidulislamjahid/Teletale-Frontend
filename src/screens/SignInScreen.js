@@ -25,7 +25,7 @@ const SignInScreen = () => {
       />
       <section className="register-screen h-screen">
         <div className=" flex flex-col items-center justify-center h-screen">
-          <div className="register-container flex flex-col justify-center items-center space-y-4 p-6 box-border rounded-lg w-1/4 h-64">
+          <div className="register-container flex flex-col justify-center items-center space-y-4 p-6 box-border rounded-lg w-1/4 h-auto">
             <h1 className="text-2xl font-primary text-center">Login</h1>
             {/* email register form */}
             <div>

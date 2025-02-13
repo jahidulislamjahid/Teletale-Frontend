@@ -7,6 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -35,7 +36,7 @@ body::-webkit-scrollbar {
 
 .all-drones-hero-section {
   background: linear-gradient(#00000059, #000000cf, #0000006b),
-    url("https://1401700980.rsc.cdn77.org/data/images/full/101759/why-you-need-a-case-for-your-new-iphone-13.png");
+    url("https://images.pexels.com/photos/10765174/pexels-photo-10765174.jpeg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
